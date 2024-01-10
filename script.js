@@ -110,10 +110,9 @@ gainBoxes.forEach(function (gainBox, index) {
             resultBoxes[index].style.borderRadius = "10px"; // Ajustez la valeur selon vos préférences
 
             // Ajoutez la propriété font-size pour réduire la taille de la police
-            resultBoxes[index].style.fontSize = "14px"; // Ajustez la valeur selon vos préférences
+            resultBoxes[index].style.fontSize = "16px"; // Ajustez la valeur selon vos préférences
 
             // Ajustez la propriété border pour réduire horizontalement et augmenter verticalement
-            resultBoxes[index].style.border = "2px solid transparent";
             resultBoxes[index].style.borderImage =
                 "linear-gradient(to right, transparent, transparent 2px, #000 2px, #000 calc(100% - 2px), transparent calc(100% - 2px), transparent) 1 100%";
         } else {
