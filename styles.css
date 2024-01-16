@@ -2,7 +2,7 @@ body {
     margin: 0;
     margin-bottom: 1500px;
     font-family: Arial, sans-serif;
-    background: url('img/fond3.jpg') center/cover no-repeat fixed;
+    background: url('img/fond4.jpg') center/cover no-repeat fixed;
 }
 
 * {
@@ -35,8 +35,8 @@ body {
 }
 
 
-/* Style pour les inputs */
-input[type="text"] {
+/* Style pour les inputs génériques */
+input {
     width: 100%;
     color: white;
     box-sizing: border-box;
@@ -45,20 +45,22 @@ input[type="text"] {
     text-align: center;
     background-color: transparent;
     font-size: 16px;
-
 }
 
-/* Style pour les inputs */
-input[type="number"] {
-    width: 100%;
-    color: white;
-    box-sizing: border-box;
-    border: none;
-    font-weight: bold;
-    text-align: center;
-    background-color: transparent;
-    font-size: 16px;
 
+.colonne2 input{
+    font-size: 14px;
+    width: 100%;
+}
+
+.colonne1 {
+    font-size: 14px;
+    width: 100%;
+}
+
+.gain {
+    font-size: 14px;
+    width: 100%;
 }
 
 
@@ -82,7 +84,7 @@ input[type="number"] {
     font-weight: bold;
     margin-top: 10px;
     height: 100%;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background: radial-gradient(ellipse at bottom, #1e2936 0%, #222d66 100%);
     overflow: hidden;
     border-radius: 30px;
     backdrop-filter: blur(10px);
@@ -110,11 +112,23 @@ input[type="number"] {
     transform: rotate(-10deg);
     margin-top: 100px;
     margin-left: 100px;
-    font-size: 2.5em;
+    font-size: 3em;
     font-family: "Mr Dafoe";
     color: white;
-    text-shadow: 0 0 0.05em #fff, 0 0 0.2em #1b2735, 0 0 0.3em #090a0f;
+    text-shadow: 0 0 0.05em #b16969, 0 0 0.2em #1b2735, 0 0 0.3em #090a0f;
 }
+
+.left-section p::before {
+    content: "";
+    position: absolute;
+    bottom: 16px;
+    width: 150px;
+    height: 14px;
+    transform: skew(-12deg) translateX(-50%);
+    background: radial-gradient(ellipse at bottom, #1e2936 0%, #222d66 100%);
+    z-index: -1;
+  }
+   
 
 .left-section p:first-child {
     margin-bottom: 10px;
@@ -150,7 +164,7 @@ input[type="number"] {
 
 .btn1,
 .btn2 {
-    background-color: #102022;
+    background: radial-gradient(ellipse at bottom, #1e2936 0%, #222d66 100%);
     border: 0 solid #e5e7eb;
     box-sizing: border-box;
     color: #ffffff;
@@ -197,7 +211,7 @@ input[type="number"] {
 .separation-section {
     position: absolute;
     width: 60%;
-    top: 115%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding-top: 20px;
@@ -247,18 +261,17 @@ h2 {
 .separation-section,
 .arbre-section {
     text-align: center;
+    margin-top: 300px;
     /* Centre le texte à l'intérieur des sections */
 }
 
-.arbre-section {
+ /* .arbre-section {
     position: relative;
     top: 300px;
-    /* Ajustez cette valeur selon vos besoins pour décaler l'arbre-section vers le bas */
-    /* Votre style pour la arbre-section */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    /* Ajustez cette valeur selon l'espace souhaité entre les colonnes */
+
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     color: #EDD4CF;
     overflow: hidden;
@@ -270,48 +283,76 @@ h2 {
     margin: 0 auto;
     font-size: 16px;
 }
+*/
+
+.arbre-section {
+    width: 90%;
+    height:600px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 250px;
+
+    background: radial-gradient(ellipse at bottom, #1e2936 0%, #222d66 100%);
+    color: #EDD4CF;
+    overflow: hidden;
+    border-radius: 30px;
+}
 
 .quarts,
 .demis,
 .finale {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    /* Assure que chaque élément occupe toute la largeur de sa colonne */
-
 }
 
-.quarts {
-    background-color: transparent;
+.texte {
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-
-.demis {
-    background-color: transparent;
+.bracket,
+.bracket1,
+.bracket3 {
+    height: 550px;
 }
-
-.finale {
-    background-color: transparent;
-
-}
-
 
 .bracket {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    /* 4 lignes égales */
-    gap: 80px;
-    /* Ajustez cette valeur selon l'espace souhaité entre les tableaux */
+    display: flex;
+    flex-direction: column; /* Empile les tableaux verticalement */
+    justify-content: space-around; /* Espace uniformément les tableaux */
+    height: 100%;
+    width: 100%; /* Pour que la flexbox occupe toute la hauteur de la div */
 }
 
+.bracket1 {
+    display: flex;
+    flex-direction: column; /* Empile les tableaux verticalement */
+    justify-content: space-around; /* Espace uniformément les tableaux */
+    height: 100%; /* Pour que la flexbox occupe toute la hauteur de la div */
+}
+
+.bracket3 {
+    display: flex;
+    flex-direction: column; /* Empile les tableaux verticalement */
+    justify-content: space-around; /* Espace uniformément les tableaux */
+    height: 100%; /* Pour que la flexbox occupe toute la hauteur de la div */
+}
+
+.tableau2,
+.tableau3,
+.tableau4,
+.tableau5,
 .tableau6,
-.tableau7 {
-    margin-top: 80px;
-    margin-bottom: 240px;
-    /* Ajustez cette valeur selon l'espacement vertical souhaité */
+.tableau7,
+.tableau8 {
+    margin-right: 5px;
 }
 
-.tableau8 {
-    margin-top: 220px;
-}
 
 
 .tableau2 td:nth-child(3),
@@ -328,7 +369,8 @@ h2 {
 .tableau7 td:nth-child(4),
 .tableau8 td:nth-child(3),
 .tableau8 td:nth-child(4) {
-    width: 60px;
+    width: 15%;
+
 }
 
 .tableau2 td:nth-child(2),
@@ -338,20 +380,22 @@ h2 {
 .tableau6 td:nth-child(2),
 .tableau7 td:nth-child(2),
 .tableau8 td:nth-child(2) {
-    width: 250px;
+    width: 35%;
+
 }
 
-.tableau2 table,
-.tableau3 table,
-.tableau4 table,
-.tableau5 table,
-.tableau6 table,
-.tableau7 table,
-.tableau8 table {
-    width: 100%;
-    margin: 0 auto;
-    margin-left: -25px;
+.tableau2 td:nth-child(1),
+.tableau3 td:nth-child(1),
+.tableau4 td:nth-child(1),
+.tableau5 td:nth-child(1),
+.tableau6 td:nth-child(1),
+.tableau7 td:nth-child(1),
+.tableau8 td:nth-child(1) {
+    width: 35%;
+    color: white;
+    font-weight: bold;
 }
+
 
 th {
     padding-right: 15px;
@@ -410,7 +454,7 @@ footer {
     transform: translate(-50%, -50%);
     justify-content: center;
     margin: 0 auto;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background: radial-gradient(ellipse at bottom, #1e2936 0%, #222d66 100%);
     color: #EDD4CF;
     overflow: hidden;
     border-radius: 30px;

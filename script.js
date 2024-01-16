@@ -345,6 +345,9 @@ document
     .getElementById("multi14")
     .addEventListener("input", determinerGagnant6);
 
+
+
+
 function mettreAJourNoms() {
     // Boucle pour les 8 premières box participant-box
     for (let i = 1; i <= 8; i++) {
@@ -356,6 +359,16 @@ function mettreAJourNoms() {
 
         // Mettre à jour le pseudo correspondant dans les tableaux
         document.getElementById("pseudoGagnant" + i).textContent = nomParticipant;
+    }
+        // Faire défiler vers la section 2 après la mise à jour des noms
+        scrollToSection('section44');
+}
+
+function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
     }
 }
 
